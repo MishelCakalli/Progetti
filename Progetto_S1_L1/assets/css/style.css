@@ -1,0 +1,121 @@
+body{
+font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4{
+    color: #25a2c3;
+}
+nav{
+    
+    display: inline-block;
+    padding-left: 150px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    width: 100%;
+    background-color: black;
+    text-align: auto;
+    margin-bottom: 0px;
+}
+main{
+    margin-top: 0px;
+}
+.presentation {
+    margin: 1v;
+    display: block;
+    background-image:url("../image/banner.jpg");
+    background-size: contain;
+    margin-top: 0px;
+    border: 0.1px solid whitesmoke;
+    text-align: center;
+    padding: 50px;
+    
+}
+.ancora{
+    display: inline-block ;
+    background-color: #f04c2f ;
+    color: white;
+    width: 150px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+.articolo1{
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+    text-align: center;
+}
+.articolo2{
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.foto_cerchiosa{
+    display: block;
+    text-align: center;
+    padding: 50px;
+    border-radius: 50%;
+    margin-bottom: 1px;
+}
+.sfondo_rosso {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    text-align: center;
+    padding: 50px;
+    background-color: #e22d0e;
+    color: white;
+}
+.h2_sfondo_rosso{
+    color: white;
+    font-weight: 900;
+    
+}
+.contenuto_foto{
+    display: block;
+    padding: 0px;
+    text-align: center;
+    margin: 4rem;
+    border: 1px solid #dee1e3;
+    text-align: center;
+    
+}
+.foto{
+    display: inline;
+    width: 100%;
+}
+footer {
+    display: block;
+    padding: 50px;
+    text-align: center;
+    background-color: #25a2c3;
+
+}
+.div_footer a {
+    color: #D0F0EE;
+    text-decoration-color: #D0F0EE;
+
+    
+
+}
+#footer_h1{
+    color: #D0F0EE;   
+}
+.material-symbols-outlined{
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}
+.div_footer{
+    padding: 25px;
+}
+.copyright{
+    display: inline-block;
+    border-top:1px solid #D0F0EE ;
+    color: #D0F0EE;
+}
+.copyright a{
+    color: #D0F0EE;
+}
