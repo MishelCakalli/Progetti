@@ -10,6 +10,7 @@ import { AdviseComponent } from './components/advise/advise.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ActivePostsComponent } from './components/active-posts/active-posts.component';
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
 const routes: Route[] = [
   {
       path: '',
@@ -35,7 +36,8 @@ const routes: Route[] = [
     AdviseComponent,
     NavbarComponent,
     ActivePostsComponent,
-    InactivePostsComponent
+    InactivePostsComponent,
+    PostCardComponent
   ],
     imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],

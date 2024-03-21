@@ -1,1 +1,17 @@
-<p>active-posts works!</p>
+<div class="container">
+    <h2 class="text-center">Post attivi</h2>
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let post of posts; let i = index">
+                <div class="col-6" *ngIf="post.active">
+                    <div class="card">
+                        <app-post-card
+                            [post]="post"
+                            class="bg-success"
+                        ></app-post-card>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
