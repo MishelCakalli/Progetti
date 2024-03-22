@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Route, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -10,6 +11,27 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogoAutoHomeComponent } from './components/logo-auto-home/logo-auto-home.component';
 import { AutoEvidenzaComponent } from './components/auto-evidenza/auto-evidenza.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+const routes: Route[] = [
+  {
+      path: '',
+      component: HomeComponent,
+  },
+  {
+      path: 'fiat',
+      component: FiatComponent,
+  },
+  {
+      path: 'ford',
+      component:FordComponent,
+  },
+  {
+    path: 'audi',
+    component: AudiComponent,
+    
+},
+  
+];
 
 @NgModule({
   declarations: [
@@ -23,10 +45,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AutoEvidenzaComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule { }
