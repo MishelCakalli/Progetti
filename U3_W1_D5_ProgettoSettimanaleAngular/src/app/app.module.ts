@@ -9,6 +9,7 @@ import { AudiComponent } from './components/audi/audi.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogoAutoHomeComponent } from './components/logo-auto-home/logo-auto-home.component';
 import { AutoEvidenzaComponent } from './components/auto-evidenza/auto-evidenza.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AutoEvidenzaComponent } from './components/auto-evidenza/auto-evidenza.
     AudiComponent,
     NavbarComponent,
     LogoAutoHomeComponent,
-    AutoEvidenzaComponent
+    AutoEvidenzaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
