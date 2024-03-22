@@ -8,6 +8,7 @@ import { FordComponent } from './components/ford/ford.component';
 import { AudiComponent } from './components/audi/audi.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogoAutoHomeComponent } from './components/logo-auto-home/logo-auto-home.component';
+import { AutoEvidenzaComponent } from './components/auto-evidenza/auto-evidenza.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LogoAutoHomeComponent } from './components/logo-auto-home/logo-auto-hom
     FordComponent,
     AudiComponent,
     NavbarComponent,
-    LogoAutoHomeComponent
+    LogoAutoHomeComponent,
+    AutoEvidenzaComponent
   ],
   imports: [
     BrowserModule
