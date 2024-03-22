@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-around">
+    <ng-container *ngFor="let post of posts">
+  <div *ngIf="!printedLogos.has(post.brandLogo)">
+    <img class="w-100" [src]="'https://listcarbrands.com/wp-content/uploads/' + post.brandLogo" alt="">
+    {{ addPrintedLogo(post.brandLogo) }}
+  </div>
+</ng-container>
+    
+    
+   
+</div>
