@@ -1,11 +1,24 @@
 <div class="d-flex justify-content-around">
-    <ng-container *ngFor="let post of posts">
-  <div *ngIf="!printedLogos.has(post.brandLogo)">
-    <img class="w-100" [src]="'https://listcarbrands.com/wp-content/uploads/' + post.brandLogo" alt="">
-    {{ addPrintedLogo(post.brandLogo) }}
+  <ng-container *ngFor="let post of posts">
+    <div *ngIf="!printedLogos.has(post.brandLogo)">
+      <img
+        class="w-100"
+        [src]="'https://listcarbrands.com/wp-content/uploads/' + post.brandLogo"
+        alt=""
+      />
+      {{ addPrintedLogo(post.brandLogo) }}
+    </div>
+  </ng-container>
+</div>
+
+<h2>Auto in Evidenza</h2>
+
+<div class="d-flex justify-content-around">
+  <div class="border w-25" *ngFor="let car of randomCars" [ngClass]="{ 'bg-success': car.available, 'bg-danger': !car.available,'border-success': car.available, 'border-danger': !car.available, }">
+    <img class="w-100 border" src="https://www.kimballstock.com/pix/car/p/{{car.modelImage}}" alt="">
+    <h3>{{ car.brand }} {{ car.model }}</h3>
+    <p>Year: {{ car.year }}</p>
+    <p>Price: {{ car.price }}</p>
+    <p>Available: {{ car.available }}</p>
   </div>
-</ng-container>
-    
-    
-   
 </div>

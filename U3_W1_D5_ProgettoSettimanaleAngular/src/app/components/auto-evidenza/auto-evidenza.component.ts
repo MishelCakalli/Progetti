@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Post } from 'src/app/models/post.interface';
+
 
 @Component({
   selector: 'app-auto-evidenza',

@@ -1,8 +1,8 @@
 export interface Post {
     brand:string;
-    brandLogo:URL;
+    brandLogo:string;
     model:string;
-    modelImage:URL;
+    modelImage:string;
     year:number;
     price:number;
     available:boolean
