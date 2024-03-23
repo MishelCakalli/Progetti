@@ -18,15 +18,15 @@ const routes: Route[] = [
       component: HomeComponent,
   },
   {
-      path: 'fiat',
+      path: 'Fiat',
       component: FiatComponent,
   },
   {
-      path: 'ford',
+      path: 'Ford',
       component:FordComponent,
   },
   {
-    path: 'audi',
+    path: 'Audi',
     component: AudiComponent,
     
 },

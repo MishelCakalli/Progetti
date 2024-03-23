@@ -20,5 +20,7 @@
     <p>Year: {{ car.year }}</p>
     <p>Price: {{ car.price }}</p>
     <p>Available: {{ car.available }}</p>
+    <a class="btn btn-primary" [routerLink]="[car.brand]" routerLinkActive="active">Dettagli</a>
+
   </div>
 </div>
