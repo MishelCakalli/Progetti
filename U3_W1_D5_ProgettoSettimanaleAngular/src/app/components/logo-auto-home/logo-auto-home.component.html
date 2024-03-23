@@ -14,13 +14,13 @@
 <h2>Auto in Evidenza</h2>
 
 <div class="d-flex justify-content-around">
-  <div class="border w-25" *ngFor="let car of randomCars" [ngClass]="{ 'bg-success': car.available, 'bg-danger': !car.available,'border-success': car.available, 'border-danger': !car.available, }">
-    <img class="w-100 border" src="https://www.kimballstock.com/pix/car/p/{{car.modelImage}}" alt="">
+  <div class="border w-25" *ngFor="let car of randomCars" [ngClass]="{ 'bg-success': car.available, 'bg-danger': !car.available,'border-success': car.available, 'border-danger': !car.available }">
+    <img class="w-100 border" [src]="'https://www.kimballstock.com/pix/car/p/' + car.modelImage" alt="">
     <h3>{{ car.brand }} {{ car.model }}</h3>
     <p>Year: {{ car.year }}</p>
     <p>Price: {{ car.price }}</p>
     <p>Available: {{ car.available }}</p>
-    <a class="btn btn-primary" [routerLink]="[car.brand]" routerLinkActive="active">Dettagli</a>
-
+    <!-- <a class="btn btn-primary" [routerLink]="[car.brand]" routerLinkActive="active">Dettagli</a> -->
   </div>
 </div>
+
