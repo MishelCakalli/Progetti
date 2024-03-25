@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ActivePostsComponent } from './components/active-posts/active-posts.component';
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
+import { HomeCardsEditComponent } from './components/home-cards-edit/home-cards-edit.component';
 
 const routes: Route[] = [
     {
@@ -26,6 +27,7 @@ const routes: Route[] = [
         path: 'post/:id',
         component: PostDetailComponent,
     },
+
     {
         path: '**',
         redirectTo: '',
@@ -40,6 +42,7 @@ const routes: Route[] = [
         ActivePostsComponent,
         InactivePostsComponent,
         PostDetailComponent,
+        HomeCardsEditComponent,
     ],
     imports: [BrowserModule, RouterModule.forRoot(routes)],
     providers: [],
