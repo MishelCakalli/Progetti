@@ -11,6 +11,7 @@ import { PostDetailComponent } from './components/post-detail/post-detail.compon
 import { SinglePostComponent } from './components/single-post/single-post.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './directives/highlight.directive';
+import { LowercasePipe } from './pipe/lowercase.pipe';
 
 
 
@@ -24,6 +25,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     PostDetailComponent,
     SinglePostComponent,
     HighlightDirective,
+    LowercasePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
