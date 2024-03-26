@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule, Routes } from '@angular/router';
-import { ActivePostsComponent } from './active-posts/active-posts.component';
-import { InactivePostsComponent } from './inactive-posts/inactive-posts.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { PostDetailComponent } from './post-detail/post-detail.component';
+import { ActivePostsComponent } from './components/active-posts/active-posts.component';
+import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { PostDetailComponent } from './components/post-detail/post-detail.component';
 
 const routes: Route[] = [
   {
