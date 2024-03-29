@@ -15,6 +15,7 @@ export class ListMissingComponent implements OnInit {
 
   ngOnInit() {
     this.incompleteTodos = this.todoService.todos.filter(todo => !todo.completed);
+    console.log(this.incompleteTodos);
   }
 
   checkBox(todo: Todo) {
