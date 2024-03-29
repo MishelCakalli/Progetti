@@ -1,0 +1,30 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "todo": "Do something nice for someone I care about",
+      "completed": true,
+      "userId": 26
+    },
+    {
+      "id": 2,
+      "todo": "Memorize the fifty states and their capitals",
+      "completed": false,
+      "userId": 48
+    },
+    {
+      "id": 3,
+      "todo": "Watch a classic movie",
+      "completed": false,
+      "userId": 4
+    }
+  ],
+  "users": {
+    "id": 1,
+    "firstName": "Terry",
+    "lastName": "Medhurst",
+    "email": "atuny0@sohu.com",
+    "image": "https://robohash.org/hicveldicta.png",
+    "title": "Help Desk Operator"
+  }
+}
