@@ -1,1 +1,7 @@
-<p>list-card works!</p>
+
+<div class="d-flex mt-3" *ngFor="let todo of todos" [ngClass]="{ 'verdeCustom': todo.completed, 'rossoCustom': !todo.completed }">
+    <input type="checkbox" [checked]="todo.completed" (change)="checkBox(todo)">
+    <p>{{ todo.todo }}</p>
+    <p>{{ todo.userId }}</p>
+  </div>
+  
