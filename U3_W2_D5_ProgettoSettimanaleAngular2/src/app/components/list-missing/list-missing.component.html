@@ -3,6 +3,12 @@
         <h1>Hey Boss, what's my task for the day</h1>
 
         <app-navbar></app-navbar>
-
+        <div class="mt-3 p-3" *ngFor="let todo of incompleteTodos" [ngClass]="{ verdeCustom: todo.completed, rossoCustom: !todo.completed }">
+            <input class="bg-light" type="checkbox" [checked]="todo.completed" (change)="checkBox(todo)" />
+            <h5 class="d-inline">{{ todo.todo }}</h5>
+            <br />
+            <p class="d-inline">Assigned to: {{ cercaUser(todo.userId)?.firstName }} {{ cercaUser(todo.userId)?.lastName }}</p>
+          </div>
+          
     </div>
 </div>
