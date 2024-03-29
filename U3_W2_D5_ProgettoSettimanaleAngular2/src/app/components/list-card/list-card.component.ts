@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-list-card',
   templateUrl: './list-card.component.html',
-  styleUrls: ['./list-card.component.scss']
+  styleUrls: ['./list-card.component.scss'],
 })
 export class ListCardComponent implements OnInit {
   todos: Todo[] = [];
@@ -30,6 +30,6 @@ export class ListCardComponent implements OnInit {
   }
 
   cercaUser(userId: number): User | undefined {
-    return this.users.find(user => user.id === userId);
+    return this.users.find((user) => user.id === userId);
   }
 }

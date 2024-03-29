@@ -1,7 +1,36 @@
 <div class="container pt-5">
-    <div class="row">
-        <h1>Hey Boss, what's my task for the day</h1>
-        <app-navbar></app-navbar>
-
+  <div class="row">
+    <h1>Hey Boss, what's my task for the day</h1>
+    <app-navbar></app-navbar>
+    <div class="mt-5">
+      <div *ngFor="let user of users" class="card mb-3">
+        <div class="card-header">{{ user.firstName }} {{ user.lastName }}</div>
+        <div class="card-body">
+          <img
+            [src]="user.image"
+            alt="User Image"
+            class="img-fluid mb-2"
+            style="max-width: 100px"
+          />
+          <ul class="list-group">
+            <li
+              class="list-group-item"
+              *ngFor="let todo of getTodosByUserId(user.id)"
+              [ngClass]="{
+                verdeCustom: todo.completed,
+                rossoCustom: !todo.completed
+              }"
+            >
+              <input
+                type="checkbox"
+                [checked]="todo.completed"
+                (change)="checkBox(todo)"
+              />
+              {{ todo.todo }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
