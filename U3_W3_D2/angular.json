@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "U3_W3_D1": {
+    "U3_W3_D2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/u3-w3-d1",
+            "outputPath": "dist/u3-w3-d2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "U3_W3_D1:build:production"
+              "browserTarget": "U3_W3_D2:build:production"
             },
             "development": {
-              "browserTarget": "U3_W3_D1:build:development"
+              "browserTarget": "U3_W3_D2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "U3_W3_D1:build"
+            "browserTarget": "U3_W3_D2:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "9f6e8bf3-c12b-4be3-af7d-9bbb462692be"
+    "analytics": "074ccd20-9505-4707-ba40-5e309ac442d5"
   }
 }
