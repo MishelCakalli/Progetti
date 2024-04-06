@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from 'src/app/service/movie.service'; // Assicurati di importare correttamente il servizio
-import { Movie } from 'src/app/models/movie.interface'; // Assicurati di importare correttamente l'interfaccia Movie
+import { MovieService } from 'src/app/service/movie.service'; 
+import { Movie } from 'src/app/models/movie.interface'; 
 
 @Component({
     selector: 'app-film',
