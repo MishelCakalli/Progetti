@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Movie } from '../models/movie.interface';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +12,9 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getMovies(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(`${this.apiUrl}/movies`);
+  getMoviesPopular(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.apiUrl}/movies-popular`);
   }
 
-  getMovieById(id: number): Observable<Movie> {
-    return this.http.get<Movie>(`${this.apiUrl}/movies/${id}`);
-  }
-
+  // Altri metodi per ottenere altri tipi di film, come film in base al genere, film più recenti, ecc.
 }

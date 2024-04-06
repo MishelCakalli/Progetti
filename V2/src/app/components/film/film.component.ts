@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from 'src/app/service/movie.service'; 
-import { Movie } from 'src/app/models/movie.interface'; 
+import { MovieService } from 'src/app/service/movie.service';
+import { Movie } from 'src/app/models/movie.interface';
 
 @Component({
-    selector: 'app-film',
-    templateUrl: './film.component.html',
-    styleUrls: ['./film.component.scss'],
+  selector: 'app-film',
+  templateUrl: './film.component.html',
+  styleUrls: ['./film.component.scss'],
 })
 export class FilmComponent implements OnInit {
-    movies: Movie[] = [];
+  movies: Movie[] = [];
 
-    constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService) {}
 
-    ngOnInit(): void {
-        this.getMovies();
-    }
+  ngOnInit(): void {
+    this.getPopularMovies();
+  }
 
-    getMovies(): void {
-        this.movieService.getMovies()
-            .subscribe(movies => {
-                this.movies = movies;
-            });
-    }
+  getPopularMovies(): void {
+    this.movieService.getMoviesPopular()
+      .subscribe(movies => {
+        this.movies = movies;
+      });
+  }
 }
