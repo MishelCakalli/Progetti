@@ -3,7 +3,7 @@ import { Post } from 'src/app/models/post.interface';
 import { PostService } from 'src/app/service/post.service';
 
 @Component({
-    selector: 'app-inactive-posts',
+    selector: 'app-utenti',
     templateUrl: './inactive-posts.component.html',
     styleUrls: ['./inactive-posts.component.scss'],
 })

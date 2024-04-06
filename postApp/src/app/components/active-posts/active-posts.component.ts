@@ -3,7 +3,7 @@ import { Post } from 'src/app/models/post.interface';
 import { PostService } from 'src/app/service/post.service';
 
 @Component({
-    selector: 'app-active-posts',
+    selector: 'app-film',
     templateUrl: './active-posts.component.html',
     styleUrls: ['./active-posts.component.scss'],
 })

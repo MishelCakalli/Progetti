@@ -4,7 +4,7 @@ import { PostService } from 'src/app/service/post.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'app-post-details',
+    selector: 'app-dettagli',
     templateUrl: './post-details.component.html',
     styleUrls: ['./post-details.component.scss'],
 })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { PostInterface } from 'src/interfaces/post.interface';
 
 @Component({
-  selector: 'app-inactive-posts',
+  selector: 'app-utenti',
   templateUrl: './inactive-posts.component.html',
   styleUrls: ['./inactive-posts.component.scss']
 })

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostInterface } from 'src/interfaces/post.interface';
 
 @Component({
-  selector: 'app-active-posts',
+  selector: 'app-film',
   templateUrl: './active-posts.component.html',
   styleUrls: ['./active-posts.component.scss'],
 })

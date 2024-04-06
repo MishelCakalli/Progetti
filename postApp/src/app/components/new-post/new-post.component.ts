@@ -6,7 +6,7 @@ import { UserService } from 'src/app/service/user.service';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-new-post',
+    selector: 'app-preferiti',
     templateUrl: './new-post.component.html',
     styleUrls: ['./new-post.component.scss'],
 })
