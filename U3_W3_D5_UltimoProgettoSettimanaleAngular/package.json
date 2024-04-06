@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "backend":"json-server-auth --watch db.json --port4201",
-    "fullstack":"concurrently \"npm run backend\" \"npm run start\""
+    "backend": "json-server-auth --watch db.json --port4201",
+    "fullstack": "concurrently \"npm run backend\" \"npm run start\""
   },
   "private": true,
   "dependencies": {
