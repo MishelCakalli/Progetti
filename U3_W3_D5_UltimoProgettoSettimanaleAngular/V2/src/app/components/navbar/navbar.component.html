@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-black sticky-top">
+    <div class="container-fluid ">
         <img
             class
             src="../assets/logo.jpg"
@@ -23,7 +23,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a
-                        class="nav-link"
+                        class="nav-link text-white"
                         [routerLink]="['/']"
                         routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }"
@@ -32,7 +32,7 @@
                 </li>
                 <li *ngIf="user" class="nav-item">
                     <a
-                        class="nav-link"
+                        class="nav-link text-white"
                         [routerLink]="['/film']"
                         routerLinkActive="active"
                         >Film</a
@@ -40,7 +40,7 @@
                 </li>
                 <li *ngIf="user" class="nav-item">
                     <a
-                        class="nav-link"
+                        class="nav-link text-white"
                         [routerLink]="['/utenti']"
                         routerLinkActive="active"
                         >Utenti</a
@@ -49,7 +49,7 @@
 
                 <li *ngIf="!user" class="nav-item">
                     <a
-                        class="nav-link"
+                        class="nav-link text-white"
                         [routerLink]="['/login']"
                         routerLinkActive="active"
                         >Login</a
@@ -57,7 +57,7 @@
                 </li>
                 <li *ngIf="!user" class="nav-item">
                     <a
-                        class="nav-link"
+                        class="nav-link text-white"
                         [routerLink]="['/register']"
                         routerLinkActive="active"
                         >Registrati</a
@@ -65,9 +65,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a
-                        class="nav-link dropdown-toggle"
-                        [routerLink]="['/utenti']"
-                        routerLinkActive="active"
+                        class="nav-link dropdown-toggle text-white"
                         href="#"
                         role="button"
                         data-bs-toggle="dropdown"
@@ -75,10 +73,10 @@
                     >
                         profilo
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu bg-black">
                         <li>
                             <a
-                                class="dropdown-item"
+                                class="dropdown-item text-primary"
                                 [routerLink]="['/dettagli']"
                                 routerLinkActive="active"
                                 href="#"
@@ -87,7 +85,7 @@
                         </li>
                         <li>
                             <a
-                                class="dropdown-item"
+                                class="dropdown-item text-primary"
                                 [routerLink]="['/preferiti']"
                                 routerLinkActive="active"
                                 href="#"

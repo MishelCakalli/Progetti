@@ -1,29 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-// import { PostService } from 'src/app/service/movie.service';
-
-import { NgForm } from '@angular/forms';
-import { UserService } from 'src/app/service/user.service';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-preferiti',
-    templateUrl: './preferiti.component.html',
-    styleUrls: ['./preferiti.component.scss'],
+  selector: 'app-preferiti',
+  templateUrl: './preferiti.component.html',
+  styleUrls: ['./preferiti.component.scss'],
 })
-export class PreferitiComponent{ //implements OnInit 
+export class PreferitiComponent {
+  favorites: any[] = [];
 
-    // arrayUsers: any[] = [];
+  constructor() {
+    // Inizializza l'array dei preferiti o recuperalo dallo storage
+    const favoritesFromStorage = localStorage.getItem('favorites');
+    if (favoritesFromStorage) {
+      this.favorites = JSON.parse(favoritesFromStorage);
+    }
+  }
 
-    // constructor(private postSrv: PostService, private userSrv: UserService, private router: Router) {}
+  toggleFavorite(movie: any) {
+    if (this.isInFavorites(movie)) {
+      this.removeFromFavorites(movie);
+    } else {
+      this.addToFavorites(movie);
+    }
+  }
 
-    // ngOnInit(): void {
-    //     this.userSrv.getUsers().subscribe((data) => {
-    //         this.arrayUsers = data;
-    //     });
-    // }
+  addToFavorites(movie: any) {
+    this.favorites.push(movie);
+    localStorage.setItem('favorites', JSON.stringify(this.favorites));
+  }
 
-    // save(form: NgForm) {
-    //     this.postSrv.newPost(form.value).subscribe();
-    //     this.router.navigate(['/']);
-    // }
+  removeFromFavorites(movie: any) {
+    const index = this.favorites.indexOf(movie);
+    if (index !== -1) {
+      this.favorites.splice(index, 1);
+      localStorage.setItem('favorites', JSON.stringify(this.favorites));
+    }
+  }
+
+  isInFavorites(movie: any): boolean {
+    return this.favorites.includes(movie);
+  }
 }

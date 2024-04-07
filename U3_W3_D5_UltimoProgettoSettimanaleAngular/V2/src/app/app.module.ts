@@ -11,7 +11,6 @@ import { FilmComponent } from './components/film/film.component';
 import { UtentiComponent } from './components/utenti/utenti.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { HomeComponent } from './components/home/home.component';
-import { HighlightDirective } from './directives/highlight.directive';
 import { UsersComponent } from './components/users/users.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
@@ -78,7 +77,6 @@ const routes: Route[] = [
         UtentiComponent,
         PostCardComponent,
         HomeComponent,
-        HighlightDirective,
         UsersComponent,
         UserDetailsComponent,
         EllipsisPipe,

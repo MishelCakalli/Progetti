@@ -17,6 +17,12 @@
       "password": "$2a$10$w2RojTfUcqBnGUeOTOBKIexlhrKTJZnbmPzn517iExfdANViZfPmC",
       "name": "mishel",
       "id": 4
+    },
+    {
+      "email": "ciao@yahoo.it",
+      "password": "$2a$10$rbRw9GH5Eoa.nLBaEo21g.cXSN3wExsdxDvG6oJpEf8YGJ5XJBLM2",
+      "name": "ciao",
+      "id": 5
     }
   ],
   "favorites": [

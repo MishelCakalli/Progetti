@@ -13,7 +13,7 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   getMoviesPopular(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(`${this.apiUrl}/movies-popular`);
+    return this.http.get<Movie[]>(`${this.apiUrl}movies-popular`);
   }
 
   // Altri metodi per ottenere altri tipi di film, come film in base al genere, film più recenti, ecc.

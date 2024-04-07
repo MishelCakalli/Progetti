@@ -9,6 +9,7 @@ import { Movie } from 'src/app/models/movie.interface';
 })
 export class FilmComponent implements OnInit {
   movies: Movie[] = [];
+  favorites: any[] = [];
 
   constructor(private movieService: MovieService) {}
 
@@ -21,5 +22,28 @@ export class FilmComponent implements OnInit {
       .subscribe(movies => {
         this.movies = movies;
       });
+  }
+
+  toggleFavorite(movie: any) {
+    if (this.isInFavorites(movie)) {
+      this.removeFromFavorites(movie);
+    } else {
+      this.addToFavorites(movie);
+    }
+  }
+
+  addToFavorites(movie: any) {
+    this.favorites.push(movie);
+  }
+
+  removeFromFavorites(movie: any) {
+    const index = this.favorites.indexOf(movie);
+    if (index !== -1) {
+      this.favorites.splice(index, 1);
+    }
+  }
+
+  isInFavorites(movie: any): boolean {
+    return this.favorites.includes(movie);
   }
 }

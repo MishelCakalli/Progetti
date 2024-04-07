@@ -1,15 +1,23 @@
-<div *ngIf="movies.length > 0">
-    <div *ngFor="let movie of movies" class="movie-card">
-      <img [src]="movie.poster_path" alt="{{ movie.title }}" class="movie-poster">
-      <div class="movie-details">
-        <h2>{{ movie.title }}</h2>
-        <p>{{ movie.overview }}</p>
-        <p>Release Date: {{ movie.release_date }}</p>
-        <p>Vote Average: {{ movie.vote_average }}</p>
+<div class="container">
+  <div *ngIf="movies.length > 0" class="row">
+    <div *ngFor="let movie of movies" class="col-md-4 mb-4">
+      <div class="card h-100 d-flex flex-column">
+        <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" class="card-img-top">
+        <div class="card-body d-flex flex-column bg-black text-white">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <p class="card-text flex-grow-1">{{ movie.overview }}</p>
+          <p class="card-text">Release Date: {{ movie.release_date }}</p>
+          <p class="card-text">Vote Average: {{ movie.vote_average }}</p>
+          <button (click)="toggleFavorite(movie)" class="btn btn-dark">
+            {{ isInFavorites(movie) ? '💔 ' : '💖' }}
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div *ngIf="movies.length === 0">
-    <p>Nessun film disponibile al momento.</p>
+  <div *ngIf="movies.length === 0" class="row">
+    <div class="col">
+      <p class="text-center">Nessun film disponibile al momento.</p>
+    </div>
   </div>
-  
+</div>
