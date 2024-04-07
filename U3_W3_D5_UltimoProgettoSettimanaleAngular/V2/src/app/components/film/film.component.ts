@@ -9,12 +9,13 @@ import { Movie } from 'src/app/models/movie.interface';
 })
 export class FilmComponent implements OnInit {
   movies: Movie[] = [];
-  favorites: any[] = [];
+  favorites: Movie[] = [];
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
     this.getPopularMovies();
+    this.loadFavorites();
   }
 
   getPopularMovies(): void {
@@ -24,7 +25,14 @@ export class FilmComponent implements OnInit {
       });
   }
 
-  toggleFavorite(movie: any) {
+  loadFavorites(): void {
+    const favoritesFromStorage = localStorage.getItem('favorites');
+    if (favoritesFromStorage) {
+      this.favorites = JSON.parse(favoritesFromStorage);
+    }
+  }
+
+  toggleFavorite(movie: Movie) {
     if (this.isInFavorites(movie)) {
       this.removeFromFavorites(movie);
     } else {
@@ -32,18 +40,20 @@ export class FilmComponent implements OnInit {
     }
   }
 
-  addToFavorites(movie: any) {
+  addToFavorites(movie: Movie) {
     this.favorites.push(movie);
+    localStorage.setItem('favorites', JSON.stringify(this.favorites));
   }
 
-  removeFromFavorites(movie: any) {
-    const index = this.favorites.indexOf(movie);
+  removeFromFavorites(movie: Movie) {
+    const index = this.favorites.findIndex(fav => fav.id === movie.id);
     if (index !== -1) {
       this.favorites.splice(index, 1);
+      localStorage.setItem('favorites', JSON.stringify(this.favorites));
     }
   }
 
-  isInFavorites(movie: any): boolean {
-    return this.favorites.includes(movie);
+  isInFavorites(movie: Movie): boolean {
+    return this.favorites.some(fav => fav.id === movie.id);
   }
 }

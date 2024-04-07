@@ -1,24 +1,21 @@
 <div class="container">
-    <h2>Favorite Movies</h2>
+    <h2>Preferiti</h2>
     <div *ngIf="favorites.length > 0" class="row">
       <div *ngFor="let movie of favorites" class="col-md-4 mb-4">
         <div class="card h-100 d-flex flex-column">
           <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" class="card-img-top">
-          <div class="card-body d-flex flex-column">
+          <div class="card-body d-flex flex-column bg-black text-white">
             <h5 class="card-title">{{ movie.title }}</h5>
             <p class="card-text flex-grow-1">{{ movie.overview }}</p>
             <p class="card-text">Release Date: {{ movie.release_date }}</p>
             <p class="card-text">Vote Average: {{ movie.vote_average }}</p>
-            <button (click)="toggleFavorite(movie)" class="btn btn-danger">
-              {{ isInFavorites(movie) ? 'Remove from Favorites' : 'Add to Favorites' }}
-            </button>
           </div>
         </div>
       </div>
     </div>
     <div *ngIf="favorites.length === 0" class="row">
       <div class="col">
-        <p class="text-center">No favorite movies added yet.</p>
+        <p class="text-center">Nessun film preferito aggiunto.</p>
       </div>
     </div>
   </div>

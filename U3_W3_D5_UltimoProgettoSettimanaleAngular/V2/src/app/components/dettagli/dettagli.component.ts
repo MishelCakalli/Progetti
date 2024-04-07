@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./dettagli.component.scss'],
 })
 export class DettagliComponent {//implements OnInit 
-    // post!: Post;
+    // post!: Post;a
 
     // constructor(private postSrv: PostService, private router: ActivatedRoute) {}
 
