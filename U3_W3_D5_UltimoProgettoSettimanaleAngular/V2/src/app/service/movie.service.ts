@@ -16,5 +16,4 @@ export class MovieService {
     return this.http.get<Movie[]>(`${this.apiUrl}movies-popular`);
   }
 
-  // Altri metodi per ottenere altri tipi di film, come film in base al genere, film più recenti, ecc.
 }

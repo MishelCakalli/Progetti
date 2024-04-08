@@ -44,18 +44,13 @@ export class AuthService {
   }
 
   private autoLogout(data: AuthData) {
-    // Implementazione del logout automatico dopo un certo periodo di tempo (opzionale)
-    // Se necessario per la tua applicazione
+ 
   }
 }
 
-// Interfaccia per i dati di autenticazione
 export interface AuthData {
   token: string;
-  // Altri dettagli dell'utente loggato, se necessario
 }
 
-// Interfaccia per i dati di registrazione
 export interface Register {
-  // Definisci i campi necessari per la registrazione
 }
