@@ -1,0 +1,104 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(/assets/image/sfondo.png);
+    
+}
+header{
+    background-image: linear-gradient(to top,salmon,purple);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 95%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+
+
+    
+}
+nav a{
+    display: inline;
+    color: white;
+    text-decoration: none;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+
+main{
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 95%;
+    padding: 10px;
+    
+    
+}
+article b,strong {
+    color: purple;
+}
+article code{
+    background-color: whitesmoke;
+    border: 2px solid  gray;
+    border-radius: 5px;
+}
+caption{
+    color: black;
+}
+th {
+    background-color:#3c91ce;
+    border: 1px solid gray;
+    color: white;
+    
+}
+
+.p_edit{
+    color: gray;
+    display: inline;
+}
+.material-symbols-outlined{
+    color:gray;
+}
+article a{
+    color: #3c91ce;
+}
+.video {
+    display: inline-block;
+    
+}
+div{
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 95%;
+    padding: 10px;
+   
+    
+}
+aside{
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 95%;
+    padding: 10px;
+   
+}
+footer{
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 95%;
+    padding: 10px;
+    
+}
