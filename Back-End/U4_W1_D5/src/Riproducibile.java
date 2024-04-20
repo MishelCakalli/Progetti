@@ -1,0 +1,3 @@
+interface Riproducibile {
+    void play();
+}
